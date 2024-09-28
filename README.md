@@ -22,11 +22,11 @@ The **TaskNest** is a simple yet effective tool for managing tasks. With a sleek
 To run this app locally:
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/todo-app.git
+   git clone https://github.com/Manitosh-Paul/TaskNest.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd todo-app
+   cd TaskNest
    ```
 3. Open `index.html` in your preferred browser:
    ```bash
