@@ -65,7 +65,7 @@ If you would like to contribute:
 5. Create a new Pull Request.
 
 ## Live
-The site is live at: 
+The site is live at: https://manitosh-paul.github.io/TaskNest/
 
 ## Contact
 For questions or feedback, feel free to reach out to manitoshraj.mj121@gmail.com or create an issue in this repository.
