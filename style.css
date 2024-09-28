@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    319deg,
+    #663dff 0%,
+    #aa00ff 37%,
+    #cc4499 100%
+  );
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+.input-data,
+.add-btn {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  outline: none;
+  border: none;
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #fff;
+  color: #4a0072;
+  font-weight: bold;
+}
+
+.input-data {
+  border-right: none;
+}
+
+.add-btn {
+  border-left: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn i {
+  color: #aa00ff;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #aa00ff;
+  font-weight: 700;
+  i {
+    color: #fff;
+  }
+}
+
+.to-do-container {
+  min-width: 25%;
+  padding: 0 1rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-item-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  transition: all 0.3s linear;
+}
+
+.todo-item {
+  list-style: none;
+  font-size: 1.5rem;
+  flex: 1;
+}
+
+.check-btn {
+  margin-left: 0.5rem;
+}
+
+.check-btn,
+.trash-btn,
+.edit-btn {
+  padding: 1rem;
+  border: none;
+  background-color: rgb(0, 208, 0);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.fa-check {
+  pointer-events: none;
+}
+
+.fa-pen-to-square {
+  pointer-events: none;
+}
+
+.trash-btn {
+  background-color: red;
+}
+
+.edit-btn {
+  cursor: pointer;
+  background-color: rgb(250, 208, 0);
+}
+
+.completed {
+  opacity: 0.8;
+  .todo-item {
+    text-decoration: line-through;
+  }
+}
+
+.deleted {
+  transform: translateY(3rem);
+  opacity: 0;
+}
+
+.filter {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #fff;
+  margin-left: 2rem;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  position: relative;
+  cursor: pointer;
+  color: #003366;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.select {
+  position: relative;
+  min-width: 50%;
+  display: flex;
+}
+
+.select::after {
+  content: "\f078";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: rgb(193, 46, 185);
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background-color: transparent;
+  color: rgb(193, 46, 185);
+}
+
+/*Responsive codes*/
+@media screen and (max-width: 624px) {
+  header {
+    font-size: 0.9rem;
+  }
+
+  header,
+  form {
+    min-height: 15vh;
+  }
+
+  form {
+    flex-wrap: wrap;
+  }
+
+  .input-data {
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  .add-btn {
+    flex-shrink: 0;
+  }
+
+  .select {
+    flex-basis: 100%;
+  }
+
+  .filter {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .todo-item {
+    font-size: 0.8rem;
+  }
+
+  .to-do-container {
+    min-width: 70%;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    padding: 0 1rem;
+  }
+  .input-data {
+    flex-grow: 1;
+    max-width: 80%;
+  }
+
+  .add-btn {
+    max-width: 10%;
+    flex-shrink: 0;
+  }
+
+  .select {
+    flex-basis: 90%;
+    margin-top: 1rem;
+  }
+
+  .select:hover::after {
+    background-color: rgb(193, 46, 185);
+    color: #fff;
+  }
+
+  .add-btn:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #aa00ff;
+    font-weight: 700;
+    i {
+      color: #aa00ff;
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  header {
+    font-size: 0.8rem;
+  }
+
+  header,
+  form {
+    min-height: 15vh;
+  }
+
+  .todo-item {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  header {
+    font-size: 0.7rem;
+  }
+
+  header,
+  form {
+    min-height: 15vh;
+  }
+
+  .todo-item {
+    font-size: 0.6rem;
+  }
+
+  .input-data {
+    width: 200px;
+  }
+
+  .add-btn {
+    width: 50px;
+  }
+}
